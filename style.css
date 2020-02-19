@@ -1,0 +1,4 @@
+body {
+  margin: 0px;
+  min-height: calc(100vh - 100px);
+}

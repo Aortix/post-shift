@@ -1,5 +1,2 @@
-<?php
-
-?>
-
-<h1>Hello world!</h1>
+<?php get_header(); ?>
+<?php get_footer(); ?>
