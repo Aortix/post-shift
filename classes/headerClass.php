@@ -2,8 +2,8 @@
 
 class Header
 {
-    private $title = "variety-shopping";
-    private $description = "A place to find out how to do things for cheap.";
+    private $title;
+    private $description;
 
     public function __construct($title, $description)
     {
