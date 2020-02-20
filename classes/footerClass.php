@@ -4,12 +4,12 @@ class Footer
 {
     private $cliffnote = "Bottom";
 
-    function __construct()
+    public function __construct()
     {
         print "Does the footer work?";
     }
 
-    function getCliffNote()
+    public function getCliffNote()
     {
         return $this->cliffnote;
     }

@@ -5,6 +5,7 @@ function wpdocs_variety_shopping_scripts()
     wp_enqueue_style('my-header', get_template_directory_uri() . '/css/header.css', NULL, microtime());
     wp_enqueue_style('my-footer', get_template_directory_uri() . '/css/footer.css', NULL, microtime());
     wp_enqueue_style('my-navbar', get_template_directory_uri() . '/css/navbar.css', NULL, microtime());
+    wp_enqueue_style('my-category', get_template_directory_uri() . '/css/category.css', NULL, microtime());
     wp_register_script('my-script', get_template_directory_uri() . '/js/header.js', array(), true);
     wp_enqueue_script('my-script');
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Lato|Poppins|Quicksand', false);

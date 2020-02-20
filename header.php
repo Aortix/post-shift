@@ -20,4 +20,5 @@ $header_instance = new Header(get_bloginfo('name'), get_bloginfo('description'))
             <h2 class="header-description"><?php echo $header_instance->getDescription(); ?></h2>
             <i class="las la-angle-double-down" onclick="Header.toggleNavBar()"></i>
         </div>
+        <?php include("components/navbar.php") ?>
     </header>

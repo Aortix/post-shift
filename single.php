@@ -1,6 +1,5 @@
-<?php get_header(); ?>
 <div>
-    <h2>This is a page, not a postsss</h2>
+    <h2>This is a post, not a page</h2>
     <?php
     while (have_posts()) {
         the_post(); ?>
@@ -8,4 +7,3 @@
         <p><?php the_content() ?></p>
     <?php } ?>
 </div>
-<?php get_footer(); ?>

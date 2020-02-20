@@ -1,0 +1,34 @@
+.category-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.category-posts-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.category-post-title {
+  font-size: 48px;
+  font-family: "Helvetica";
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.category-post-content {
+  font-size: 26px;
+  font-family: "Quicksand";
+}
+
+.category-categories-and-tags {
+  margin-top: 10px;
+}
+
+.category-categories-and-tags * {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Lato";
+  border: 1px solid gray;
+  border-radius: 100px;
+  padding: 5px 9px;
+}
