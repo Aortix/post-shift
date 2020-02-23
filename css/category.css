@@ -1,11 +1,61 @@
 .category-container {
-  width: 95%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
 }
 
 .category-posts-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.category-main-category-container {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.category-main-category-title {
+  font-size: 60px;
+  font-family: Helvetica;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+.category-main-category-description {
+  font-size: 24px;
+  color: gray;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.category-main-category-description p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.category-sidebar {
   width: 80%;
-  margin: 0 auto;
+  min-height: 100vh;
+  margin: 0px 10%;
+  padding: 40px 10%;
+  border-left: 1px solid gray;
+}
+
+.category-post-metadata-container {
+  display: flex;
+  align-items: center;
+}
+
+.category-post-metadata-no-avatar-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.category-post-metadata-container img {
+  border-radius: 200px;
 }
 
 .category-post-title {
@@ -13,15 +63,19 @@
   font-family: "Helvetica";
   margin-top: 0px;
   margin-bottom: 0px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.category-post-content {
-  font-size: 26px;
-  font-family: "Quicksand";
+.category-post-author {
+  font-family: "Lato";
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0px;
 }
 
 .category-categories-and-tags {
-  margin-top: 10px;
+  margin-top: 17px;
 }
 
 .category-categories-and-tags * {
@@ -31,4 +85,29 @@
   border: 1px solid gray;
   border-radius: 100px;
   padding: 5px 9px;
+}
+
+.category-view-post-button {
+  color: rgba(0, 0, 140, 0.8);
+  border: 1px solid rgba(0, 0, 140, 0.8);
+  background-color: white;
+  padding: 7px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: "Quicksand";
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.category-view-post-button:hover {
+  background-color: rgba(0, 0, 140, 0.8);
+  color: white;
+}
+
+.category-post-content {
+  font-size: 26px;
+  font-family: "Quicksand";
+  margin-top: 30px;
+  margin-bottom: 100px;
+  line-height: 36px;
 }

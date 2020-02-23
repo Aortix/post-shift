@@ -1,3 +1,49 @@
+.header-auth-container {
+  display: flex;
+  align-content: center;
+  background-color: rgba(0, 0, 200, 0.8);
+  color: white;
+  padding: 3px;
+}
+
+.header-auth-container a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: "Poppins";
+  padding: 2px 3px;
+  margin-right: 4px;
+}
+
+.header-auth-avatar-link {
+}
+
+.header-auth-name {
+  font-family: "Poppins";
+  margin: 0px;
+  color: white;
+}
+
+.header-auth-logout-link {
+  margin-left: auto;
+}
+
+.header-auth-logout {
+  margin: 0px;
+  color: white;
+}
+
+.header-auth-login-link {
+}
+
+.header-auth-login {
+}
+
+.header-auth-register-link {
+}
+
+.header-auth-register {
+}
+
 .header-container {
   position: relative;
   text-align: center;
