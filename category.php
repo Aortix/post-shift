@@ -5,19 +5,25 @@
         $current_url = home_url(add_query_arg(array(), $wp->request));
         $part1Cut = strpos($current_url, get_bloginfo('name'));
         $part1 = substr($current_url, $part1Cut, strlen($current_url)); ?>
-        <a href="<?php echo get_home_url() ?>"><?php echo substr($part1, 0, strpos($part1, "/")); ?></a>
+        <a class="category-home-page-link" href="<?php echo get_home_url() ?>"><?php echo ucfirst(substr($part1, 0, strpos($part1, "/"))); ?></a>
+        <i class="las la-arrow-right"></i>
         <?php $part1 = substr($part1, strpos($part1, "/") + 1, strlen($part1));
+        $count = 1;
         while ($part1Cut != false) {
             $part1Cut = strpos($part1, "/");
             $partToEcho = substr($part1, 0, $part1Cut);
             if ($partToEcho != "category" and $partToEcho != "author") {
                 $cat_id = get_cat_ID($partToEcho);
                 $cat_link = get_category_link($cat_id); ?>
-                <a href="<?php echo $cat_link ?>"><?php echo $partToEcho ?></a>
+                <a class="category-directories-links" href="<?php echo $cat_link ?>"><?php echo ucfirst($partToEcho) ?></a>
+                <?php if ($count != 1) { ?>
+                    <i class="las la-arrow-right"></i>
         <?php }
+                $count++;
+            }
             $part1 = substr($part1, $part1Cut + 1, strlen($part1));
         } ?>
-        <a href="<?php echo get_category_link(get_cat_ID(single_cat_title('', false))); ?>"><?php single_cat_title(); ?></a>
+        <a class="category-current-directory-link" href="<?php echo get_category_link(get_cat_ID(single_cat_title('', false))); ?>"><?php ucfirst(single_cat_title()); ?></a>
         <?php $parent_term_id = get_cat_ID(single_cat_title('', false)); // term id of parent term (edited missing semi colon)
 
         $taxonomies = array(
@@ -30,10 +36,15 @@
         );
 
         $terms = get_terms($taxonomies, $args);
-        foreach ($terms as $term) { ?>
-            <a href="<?php echo get_category_link($term->term_id); ?>"><?php echo $term->name ?></a>
+        if (count($terms) > 0) { ?>
+            <i class="las la-arrow-right"></i>
         <?php }
-        ?>
+        foreach ($terms as $key => $term) { ?>
+            <a class="category-sub-directories-links" href="<?php echo get_category_link($term->term_id); ?>"><?php echo ucfirst($term->name) ?></a>
+            <?php if ($key != count($terms) - 1) { ?>
+                <i class="las la-grip-lines-vertical"></i>
+        <?php }
+        } ?>
         <div class="category-main-category-container">
             <h2 class="category-main-category-title"><?php single_cat_title(); ?></h2>
             <div class="category-main-category-description"><?php echo category_description(); ?></div>

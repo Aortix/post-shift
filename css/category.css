@@ -11,6 +11,32 @@
   margin-bottom: 40px;
 }
 
+.category-home-page-link {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
+.category-directories-links {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
+.category-current-directory-link {
+  border: 1px solid blue;
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
+.category-sub-directories-links {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
 .category-main-category-container {
   text-align: center;
   margin-bottom: 75px;
