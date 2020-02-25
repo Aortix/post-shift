@@ -1,0 +1,41 @@
+.page-main-container {
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.page-post-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-post-container img {
+  border-radius: 200px;
+}
+
+.page-page-post-container {
+  display: flex;
+  margin-left: 15px;
+}
+
+.page-post-title {
+  font-size: 56px;
+  font-family: "Helvetica";
+  margin-top: 0px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.page-post-content {
+  font-size: 26px;
+  font-family: "Quicksand";
+  margin-top: 50px;
+  margin-bottom: 100px;
+  line-height: 36px;
+  width: 75%;
+  margin: 0 auto;
+  text-align: left;
+}

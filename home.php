@@ -1,27 +1,10 @@
 <?php get_header(); ?>
-<?php
-$current_url = home_url(add_query_arg(array(), $wp->request));
-$index = strpos($current_url, get_bloginfo('name'));
-while ($index != false) {
-    $current_url = substr($current_url, $index + 1, strlen($current_url));
-    $index = strpos($current_url, "/");
-}
-$user_of_page = get_user_by("slug", $current_url); ?>
-
 <div class="main-container">
     <div class="main-posts-container">
-        <div class="author-container">
-            <div class="author-information-and-avatar">
-                <?php echo get_avatar(get_the_author_meta('user_email'), 160) ?>
-                <div class="author-information">
-                    <p><?php echo $user_of_page->first_name ?> <?php echo $user_of_page->last_name ?></p>
-                    <p><?php echo $user_of_page->user_url ?></p>
-                    <p><?php echo $user_of_page->jabber ?></p>
-                </div>
-            </div>
-            <p class="author-description"><?php echo $user_of_page->description ?></p>
+        <div class="main-header-container">
+            <h2 class="main-header-title"><?php single_cat_title(); ?></h2>
+            <div class="main-header-description"><?php echo category_description(); ?></div>
         </div>
-        <h5 class="author-posts-title">Author Posts</h5>
         <?php
         while (have_posts()) {
             the_post(); ?>
