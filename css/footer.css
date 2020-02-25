@@ -1,3 +1,24 @@
 .footer-container {
-  border-top: 1px solid gray;
+  min-height: 120px;
+  background-color: rgba(40, 40, 40, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Quicksand";
+}
+
+.footer-website-title {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer-privacy-policy-link {
+  color: white;
 }

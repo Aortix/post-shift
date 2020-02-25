@@ -1,6 +1,9 @@
   <?php ?>
   <footer class="footer-container">
-    Copyright 2020
+    <div class="footer-content">
+      <h6 class="footer-website-title"><?php echo get_bloginfo('name') ?></h6>
+      <a class="footer-privacy-policy-link" href="<?php echo get_permalink(get_page_by_title('Privacy Policy')) ?>">Privacy Policy</a>
+    </div>
   </footer>
   <?php wp_footer(); ?>
   </body>

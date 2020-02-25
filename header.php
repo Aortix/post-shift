@@ -39,7 +39,7 @@ global $wp;
         <div class="header-container">
             <h1 class="header-title"><?php echo $header_instance->getTitle(); ?></h1>
             <h2 class="header-description"><?php echo $header_instance->getDescription(); ?></h2>
-            <i class="las la-angle-double-down" onclick="Header.toggleNavBar()"></i>
+            <i class="las la-angle-double-down" onclick="Header.toggleNavBar()" style="bottom: -4px;"></i>
         </div>
         <?php include("components/navbar.php") ?>
     </header>
