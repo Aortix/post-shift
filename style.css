@@ -2,3 +2,143 @@ body {
   margin: 0px;
   min-height: calc(100vh - 100px);
 }
+
+.main-container {
+  width: 90%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
+}
+
+.main-posts-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.main-home-page-link {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
+.main-directories-links {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
+.main-current-directory-link {
+  border: 1px solid blue;
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
+.main-sub-directories-links {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 180, 0.8);
+}
+
+.main-header-container {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.main-header-title {
+  font-size: 68px;
+  font-family: Helvetica;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+.main-header-description {
+  font-size: 24px;
+  color: gray;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.main-header-description p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.main-post-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-post-container img {
+  border-radius: 200px;
+}
+
+.sub-post-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.sub-post-title {
+  font-size: 48px;
+  font-family: "Helvetica";
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sub-post-author {
+  font-family: "Lato";
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0px;
+}
+
+.sub-post-categories-and-tags {
+  margin-top: 17px;
+}
+
+.sub-post-categories-and-tags * {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Lato";
+  border: 1px solid gray;
+  border-radius: 100px;
+  padding: 5px 9px;
+}
+
+.main-view-post-button {
+  color: rgba(0, 0, 140, 0.8);
+  border: 1px solid rgba(0, 0, 140, 0.8);
+  background-color: white;
+  padding: 7px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: "Quicksand";
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.main-view-post-button:hover {
+  background-color: rgba(0, 0, 140, 0.8);
+  color: white;
+}
+
+.main-post-content {
+  font-size: 26px;
+  font-family: "Quicksand";
+  margin-top: 30px;
+  margin-bottom: 100px;
+  line-height: 36px;
+}
+
+.right-sidebar-wrapper {
+  width: 80%;
+  min-height: 100vh;
+  margin: 0px 10%;
+  padding: 40px 10%;
+  border-left: 1px solid gray;
+}
