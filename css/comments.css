@@ -1,0 +1,78 @@
+.comments-container {
+  width: 80%;
+  text-align: left;
+}
+
+.comment-container {
+  border: 1px solid silver;
+  padding: 15px;
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+
+.comments-main-title {
+  font-family: "Lato";
+  font-size: 48px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
+}
+
+.comment-intro-container {
+  display: flex;
+  align-items: center;
+}
+
+.comment-intro-text {
+  font-family: "Lato";
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.comment-content {
+  font-size: 18px;
+  font-family: "Lato";
+  line-height: 24px;
+}
+
+.comment-content p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* The selectors below I obtained from the browser console! */
+#reply-title {
+  font-family: "Helvetica";
+}
+
+#respond {
+  font-family: "Helvetica";
+  margin-top: 50px;
+}
+
+.comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+#comment {
+  box-shadow: 0px 0px 1px black;
+  font-size: 16px;
+}
+
+#reply-title > a {
+  text-decoration: none;
+  pointer-events: none;
+}
+
+#cancel-comment-reply-link {
+  display: block;
+  margin-top: 3px;
+}
+
+#submit {
+  cursor: pointer;
+  padding: 6px;
+  border: 1px solid silver;
+  background-color: white;
+}

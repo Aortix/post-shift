@@ -1,62 +1,33 @@
 <?php
+function format_comment($comment, $args, $depth)
+{
 
-/**
- * The template for displaying Comments.
- *
- * The area of the page that contains comments and the comment form.
- *
- * @package WordPress
- */
+    $GLOBALS['comment'] = $comment; ?>
+    <div class="comment-container">
+        <div class="comment-intro-container">
+            <a href="<?php echo get_author_posts_url(get_user_by('email', $comment->comment_author_email)->ID); ?>"><?php echo get_avatar($comment->comment_author_email, 32); ?></a>
+            <p class="comment-intro-text"><?php echo ucfirst(get_comment_author()); ?> commented on <?php printf(__('%1$s'), get_comment_date(), get_comment_time()) ?></p>
+        </div>
 
-/*
- * If the current post is protected by a password and the visitor has not yet
- * entered the password we will return early without loading the comments.
- */
-if (post_password_required())
-    return;
-?>
-
-<div id="comments" class="comments-area">
-    <?php if (have_comments()) : ?>
-        <h2 class="comments-title">
-            <?php
-            printf(
-                _nx('One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'twentythirteen'),
-                number_format_i18n(get_comments_number()),
-                '<span>' . get_the_title() . '</span>'
-            );
-            ?>
-        </h2>
-
-        <ol class="comment-list">
-            <?php
-            wp_list_comments(array(
-                'style'       => 'ol',
-                'short_ping'  => true,
-                'avatar_size' => 74,
-            ));
-            ?>
-        </ol><!-- .comment-list -->
-
-        <?php
-        // Are there comments to navigate through?
-        if (get_comment_pages_count() > 1 and get_option('page_comments')) :
-        ?>
-            <nav class="navigation comment-navigation" role="navigation">
-                <h1 class="screen-reader-text section-heading"><?php _e('Comment navigation', 'post-shift'); ?></h1>
-                <div class="nav-previous"><?php previous_comments_link(__('&amp;larr; Older Comments', 'post-shift')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments &amp;rarr;', 'post-shift')); ?></div>
-            </nav><!-- .comment-navigation -->
-        <?php endif; // Check for comment navigation 
-        ?>
-
-        <?php if (!comments_open() and get_comments_number()) : ?>
-            <p class="no-comments"><?php _e('Comments are closed.', 'post-shift'); ?></p>
+        <?php if ($comment->comment_approved == '0') : ?>
+            <em>
+                <php _e('Your comment is awaiting moderation.') ?>
+            </em><br />
         <?php endif; ?>
 
-    <?php endif; // have_comments() 
-    ?>
+        <div class="comment-content"><?php comment_text(); ?></div>
 
-    <?php comment_form(); ?>
+        <div class="reply">
+            <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+        </div>
+    </div>
 
-</div><!-- #comments -->
+<?php } ?>
+<div>
+    <h4 class="comments-main-title">Comments</h4>
+    <div class="comments-container">
+        <?php wp_list_comments('type=comment&callback=format_comment'); ?>
+        <?php comment_form(); ?>
+    </div>
+</div>
+<?php ?>

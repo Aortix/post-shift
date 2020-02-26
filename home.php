@@ -1,10 +1,6 @@
 <?php get_header(); ?>
 <div class="main-container">
     <div class="main-posts-container">
-        <div class="main-header-container">
-            <h2 class="main-header-title"><?php single_cat_title(); ?></h2>
-            <div class="main-header-description"><?php echo category_description(); ?></div>
-        </div>
         <?php
         while (have_posts()) {
             the_post(); ?>

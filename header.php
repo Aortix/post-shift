@@ -47,7 +47,9 @@ global $wp;
             <?php } ?>
         </div>
         <div class="header-container">
-            <h1 class="header-title"><?php echo $header_instance->getTitle(); ?></h1>
+            <a style="text-decoration: none; color: inherit; " href="<?php echo get_home_url(); ?>">
+                <h1 class="header-title"><?php echo $header_instance->getTitle(); ?></h1>
+            </a>
             <h2 class="header-description"><?php echo $header_instance->getDescription(); ?></h2>
             <i class="las la-angle-double-down" onclick="Header.toggleNavBar()"></i>
         </div>

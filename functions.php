@@ -7,6 +7,7 @@ function wp_variety_shopping_scripts()
     wp_enqueue_style('my-navbar', get_template_directory_uri() . '/css/navbar.css', NULL, microtime());
     wp_enqueue_style('my-category', get_template_directory_uri() . '/css/category.css', NULL, microtime());
     wp_enqueue_style('my-author', get_template_directory_uri() . '/css/author.css', NULL, microtime());
+    wp_enqueue_style('my-comments', get_template_directory_uri() . '/css/comments.css', NULL, microtime());
     wp_enqueue_style('my-page', get_template_directory_uri() . '/css/page.css', NULL, microtime());
     wp_register_script('my-script', get_template_directory_uri() . '/js/header.js', array(), microtime());
     wp_enqueue_script('my-script');
