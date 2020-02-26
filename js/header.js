@@ -30,10 +30,10 @@ class Header {
       }
     }
 
-    createTransition(30, 4, 0.5, 12).then(() => {
-      createTransition(30, 12, 0.5, 4).then(() => {
-        createTransition(30, 4, 0.5, 12).then(() => {
-          createTransition(30, 12, 0.5, 4);
+    createTransition(30, 1, 0.5, 9).then(() => {
+      createTransition(30, 9, 0.5, 1).then(() => {
+        createTransition(30, 1, 0.5, 9).then(() => {
+          createTransition(30, 9, 0.5, 1);
         });
       });
     });

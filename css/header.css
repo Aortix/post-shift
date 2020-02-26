@@ -1,46 +1,78 @@
 .header-auth-container {
   display: flex;
   align-content: center;
+  justify-content: space-between;
   background-color: rgba(40, 40, 40, 1);
-  padding: 3px;
+  padding: 5px 9px;
 }
 
 .header-auth-container a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.9);
   font-family: "Poppins";
-  padding: 2px 3px;
-  margin-right: 4px;
 }
 
-.header-auth-avatar-link {
+.header-logged-in-information {
+  display: flex;
 }
 
 .header-auth-name {
+  font-family: "Poppins";
+  margin: 0px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.header-page-links {
+  display: flex;
+}
+
+.header-page-links li {
+  list-style-type: none;
+  margin-left: 4px;
+  margin-right: 3px;
+}
+
+.header-page-links li a {
   font-family: "Poppins";
   margin: 0px;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .header-auth-logout-link {
-  margin-left: auto;
+  margin-left: 10px;
+  border: 1px solid white;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .header-auth-logout {
   margin: 0px;
   color: rgba(255, 255, 255, 0.9);
+  vertical-align: middle;
 }
 
-.header-auth-login-link {
+.header-auth-links {
+  display: flex;
+}
+
+.header-auth-links a {
+  display: flex;
+  margin-right: 3px;
+  margin-left: 4px;
 }
 
 .header-auth-login {
-}
-
-.header-auth-register-link {
+  font-family: "Poppins";
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .header-auth-register {
+  font-family: "Poppins";
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .header-container {
@@ -71,4 +103,5 @@
   cursor: pointer;
   position: absolute;
   font-size: 21px;
+  bottom: 0px;
 }
