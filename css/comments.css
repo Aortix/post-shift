@@ -6,7 +6,7 @@
 .comment-container {
   border: 1px solid silver;
   padding: 15px;
-  max-width: 650px;
+  max-width: 500px;
   margin-bottom: 40px;
 }
 
@@ -20,6 +20,7 @@
 
 .comment-intro-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -52,12 +53,15 @@
 
 .comment-form-comment {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
 #comment {
   box-shadow: 0px 0px 1px black;
   font-size: 16px;
+  width: 95%;
+  max-width: 450px;
 }
 
 #reply-title > a {

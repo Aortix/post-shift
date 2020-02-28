@@ -1,6 +1,17 @@
 class Header {
   constructor() {}
 
+  static toggleMenu() {
+    const header_links = document.getElementsByClassName(
+      "header-page-links"
+    )[0];
+    if (header_links.style.display === "flex") {
+      header_links.style.display = "none";
+    } else {
+      header_links.style.display = "flex";
+    }
+  }
+
   static transitionForDownArrow() {
     let downArrowIcon = document.getElementsByClassName(
       "la-angle-double-down"

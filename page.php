@@ -7,10 +7,10 @@
                 the_post(); ?>
                 <div class="page-post-container">
                     <div class="page-page-post-container">
-                        <h2 class="page-post-title"><?php the_title() ?></h2>
+                        <h2 class="page-post-title"><?php esc_attr(the_title()); ?></h2>
                     </div>
                 </div>
-                <div class="page-post-content"><?php the_content() ?></div>
+                <div class="page-post-content"><?php esc_attr(the_content()); ?></div>
             <?php } ?>
         </div>
     </div>

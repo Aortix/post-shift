@@ -1,0 +1,75 @@
+/*Built in search widget*/
+#searchform {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid gray;
+  background-color: rgba(40, 40, 40, 1);
+}
+
+.screen-reader-text {
+  display: block;
+  font-family: "Quicksand";
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#s {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 22px;
+  min-width: 180px;
+}
+
+#searchsubmit {
+  display: block;
+  font-family: "Helvetica";
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+/*Built in recent posts widget*/
+.widget_recent_entries {
+  background-color: rgba(40, 40, 40, 1);
+  border: 1px solid gray;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.widget-title {
+  font-family: "Quicksand";
+  font-weight: 600;
+  text-align: center;
+  font-size: 21px;
+}
+
+.widget_recent_entries ul {
+  text-align: left;
+  padding-left: 0px;
+}
+
+.widget_recent_entries ul li {
+  margin: 15px 0px;
+  margin-left: 3px;
+  list-style-type: none;
+}
+
+.widget_recent_entries ul li a {
+  color: inherit;
+  font-family: "Poppins";
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid gray;
+}
+
+.post-date {
+  display: block;
+  margin-top: 1px;
+  font-family: "Poppins";
+  font-size: 12px;
+}

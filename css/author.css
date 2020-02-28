@@ -6,22 +6,32 @@
 
 .author-information-and-avatar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .author-information {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-left: 10px;
   font-weight: 600;
 }
 
-.author-information > p {
+.author-information > p:first-child {
   margin-top: 0px;
   margin-bottom: 10px;
   font-family: "Helvetica";
   font-size: 36px;
+}
+
+.author-information > p:not(:first-child) {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: "Quicksand";
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .author-description {
@@ -37,5 +47,12 @@
   font-size: 48px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
+}
+
+.main-no-posts-title {
+  font-family: "Lato";
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.8);
   margin-bottom: 50px;
 }

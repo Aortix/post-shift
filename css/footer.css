@@ -3,13 +3,16 @@
   background-color: rgba(40, 40, 40, 1);
   color: white;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  width: 100%;
 }
 
 .footer-content {
   width: 90%;
   margin: 0 auto;
   font-family: "Quicksand";
+  text-align: left;
 }
 
 .footer-website-title {

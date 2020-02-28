@@ -1,19 +1,22 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0px;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh);
 }
 
 .main-container {
   width: 90%;
-  margin: 0px auto;
-  display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-rows: auto;
+  margin: 0 auto;
+  min-height: calc(100vh - 190px - 120px);
 }
 
 .main-posts-container {
   margin-top: 40px;
   margin-bottom: 40px;
+  font-size: 20px;
 }
 
 .main-home-page-link {
@@ -77,6 +80,7 @@ body {
 
 .sub-post-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-left: 15px;
 }
@@ -104,10 +108,10 @@ body {
 .sub-post-categories-and-tags * {
   text-decoration: none;
   color: inherit;
-  font-family: "Lato";
+  font-family: "Quicksand";
   border: 1px solid gray;
   border-radius: 100px;
-  padding: 5px 9px;
+  padding: 5px 10px;
 }
 
 .main-view-post-button {
@@ -135,10 +139,44 @@ body {
   line-height: 36px;
 }
 
+#sidebar-right-container {
+  display: none;
+}
+
 .right-sidebar-wrapper {
+  display: none;
   width: 80%;
   min-height: 100vh;
   margin: 0px 10%;
   padding: 40px 10%;
   border-left: 1px solid gray;
+}
+
+.main-no-posts-title {
+  font-family: "Lato";
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 900px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+  }
+
+  #sidebar-right-container {
+    display: block;
+  }
+
+  .right-sidebar-wrapper {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .main-container {
+    grid-template-columns: 80% 20%;
+  }
 }

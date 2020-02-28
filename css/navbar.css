@@ -11,13 +11,14 @@
   min-height: 80px;
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   list-style-type: none;
 }
 
 #navbar-menu-ul > li {
-  font-size: 26px;
+  font-size: 40px;
   padding: 40px;
   font-family: "Quicksand";
   font-weight: 700;
@@ -29,10 +30,20 @@
 }
 
 .sub-menu {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .sub-menu li {
   margin-top: 10px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 900px) {
+  #navbar-menu-ul > li {
+    font-size: 26px;
+  }
+
+  .sub-menu {
+    font-size: 20px;
+  }
 }

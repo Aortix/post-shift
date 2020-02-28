@@ -1,9 +1,14 @@
+.header-main-container {
+  min-height: 190px;
+}
+
 .header-auth-container {
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
   background-color: rgba(40, 40, 40, 1);
-  padding: 5px 9px;
+  padding: 10px 10px;
 }
 
 .header-auth-container a {
@@ -14,6 +19,7 @@
 
 .header-logged-in-information {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header-auth-name {
@@ -24,41 +30,60 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.header-page-links {
+.header-menu-container {
   display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.la-bars {
+  display: block;
+  color: white;
+  font-size: 26px;
+}
+
+.header-page-links {
+  display: none;
+  z-index: 100;
+  flex-direction: column;
+  background-color: white;
+  max-width: 600px;
+  margin-left: auto;
+  text-align: center;
+  box-shadow: 0px 0px 1px black;
 }
 
 .header-page-links li {
   list-style-type: none;
-  margin-left: 4px;
-  margin-right: 3px;
+  padding: 15px;
+  border-bottom: 1px solid black;
 }
 
 .header-page-links li a {
   font-family: "Poppins";
+  font-size: 30px;
   margin: 0px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .header-auth-logout-link {
-  margin-left: 10px;
-  border: 1px solid white;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 15px;
 }
 
 .header-auth-logout {
+  font-family: "Poppins";
+  font-size: 30px;
   margin: 0px;
-  color: rgba(255, 255, 255, 0.9);
-  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .header-auth-links {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header-auth-links a {
-  display: flex;
+  display: inline-block;
   margin-right: 3px;
   margin-left: 4px;
 }
@@ -66,6 +91,9 @@
 .header-auth-login {
   font-family: "Poppins";
   margin: 0px;
+  border: 1px solid white;
+  padding-left: 5px;
+  padding-right: 5px;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -85,10 +113,11 @@
 }
 
 .header-title {
+  display: inline-block;
   font-size: 54px;
   font-family: "Poppins", "Lato", "Helvetica";
   letter-spacing: 1px;
-  margin: 0px;
+  margin: 0 auto;
 }
 
 .header-description {
@@ -104,4 +133,47 @@
   position: absolute;
   font-size: 21px;
   bottom: 0px;
+}
+
+@media screen and (min-width: 900px) {
+  .header-menu-container {
+    display: block;
+  }
+
+  .la-bars {
+    display: none !important;
+  }
+
+  .header-page-links {
+    display: flex !important;
+    flex-wrap: no-wrap !important;
+    flex-direction: row;
+    background-color: rgba(40, 40, 40, 1);
+    width: initial;
+    max-width: none;
+    box-shadow: none;
+  }
+
+  .header-page-links li {
+    margin-left: 4px;
+    margin-right: 3px;
+    border-bottom: none;
+    padding: 0px 6px;
+  }
+
+  .header-page-links li a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+  }
+
+  .header-auth-logout-link {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    padding: 0px 10px;
+    height: 28px;
+  }
+
+  .header-auth-logout {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+  }
 }
