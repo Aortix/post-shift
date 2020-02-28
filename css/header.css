@@ -7,13 +7,13 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
-  background-color: rgba(40, 40, 40, 1);
+  background-color: var(--main-theme-color);
   padding: 10px 10px;
 }
 
 .header-auth-container a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--subtle-text-color);
   font-family: "Poppins";
 }
 
@@ -27,7 +27,7 @@
   margin: 0px;
   margin-left: 4px;
   margin-right: 4px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--main-theme-text-color);
 }
 
 .header-menu-container {
@@ -38,7 +38,7 @@
 
 .la-bars {
   display: block;
-  color: white;
+  color: var(--main-theme-text-color);
   font-size: 26px;
 }
 
@@ -46,11 +46,11 @@
   display: none;
   z-index: 100;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--secondary-theme-color);
   max-width: 600px;
   margin-left: auto;
   text-align: center;
-  box-shadow: 0px 0px 1px black;
+  box-shadow: var(--main-box-shadow-color);
 }
 
 .header-page-links li {
@@ -63,7 +63,7 @@
   font-family: "Poppins";
   font-size: 30px;
   margin: 0px;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--subtle-text-color);
 }
 
 .header-auth-logout-link {
@@ -74,7 +74,7 @@
   font-family: "Poppins";
   font-size: 30px;
   margin: 0px;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--subtle-text-color);
 }
 
 .header-auth-links {
@@ -94,20 +94,20 @@
   border: 1px solid white;
   padding-left: 5px;
   padding-right: 5px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--main-theme-text-color);
 }
 
 .header-auth-register {
   font-family: "Poppins";
   margin: 0px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--main-theme-text-color);
 }
 
 .header-container {
   position: relative;
   text-align: center;
-  background-color: rgba(40, 40, 40, 1);
-  color: rgba(255, 255, 255, 0.9);
+  background-color: var(--main-theme-color);
+  color: var(--main-theme-text-color);
   padding-bottom: 45px;
   box-shadow: 0px 1px 1px black;
 }
@@ -124,7 +124,6 @@
   font-size: 17px;
   font-family: "Lato", "Quicksand", "Helvetica";
   font-weight: 500;
-  /*color: rgba(0, 0, 0, 0.7);*/
   margin: 0px;
 }
 
@@ -148,7 +147,7 @@
     display: flex !important;
     flex-wrap: no-wrap !important;
     flex-direction: row;
-    background-color: rgba(40, 40, 40, 1);
+    background-color: var(--main-theme-color);
     width: initial;
     max-width: none;
     box-shadow: none;
@@ -162,7 +161,7 @@
   }
 
   .header-page-links li a {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--main-theme-text-color);
     font-size: 16px;
   }
 
@@ -174,6 +173,6 @@
 
   .header-auth-logout {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--main-theme-text-color);
   }
 }

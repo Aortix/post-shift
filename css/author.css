@@ -15,6 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   margin-left: 10px;
   font-weight: 600;
 }
@@ -31,12 +32,12 @@
   margin-bottom: 10px;
   font-family: "Quicksand";
   font-size: 28px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--subtle-text-color);
 }
 
 .author-description {
-  font-family: "Lato";
-  font-size: 24px;
+  font-family: "Quicksand";
+  font-size: 26px;
   margin-top: 50px;
   margin-bottom: 130px;
   line-height: 35px;
@@ -46,13 +47,19 @@
   font-family: "Lato";
   font-size: 48px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--subtle-text-color);
   margin-bottom: 50px;
 }
 
 .main-no-posts-title {
   font-family: "Lato";
   font-size: 32px;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--subtle-text-color);
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1050px) {
+  .author-information {
+    align-items: flex-start;
+  }
 }

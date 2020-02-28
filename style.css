@@ -1,3 +1,14 @@
+:root {
+  --main-theme-color: rgba(40, 40, 40, 1);
+  --secondary-theme-color: white;
+  --main-theme-text-color: rgba(255, 255, 255, 0.9);
+  --main-text-color: black;
+  --main-border-color: 1px solid gray;
+  --main-box-shadow-color: 0px 0px 1px black;
+  --subtle-text-color: rgba(0, 0, 0, 0.5);
+  --highlight-text-color: rgba(0, 0, 180, 0.8);
+}
+
 html {
   height: 100%;
 }
@@ -22,27 +33,27 @@ body {
 .main-home-page-link {
   font-family: Helvetica, sans-serif;
   text-decoration: none;
-  color: rgba(0, 0, 180, 0.8);
+  color: var(--highlight-text-color);
 }
 
 .main-directories-links {
   font-family: Helvetica, sans-serif;
   text-decoration: none;
-  color: rgba(0, 0, 180, 0.8);
+  color: var(--highlight-text-color);
 }
 
 .main-current-directory-link {
-  border: 1px solid blue;
+  border: 1px solid var(--highlight-text-color);
   padding: 5px;
   font-family: Helvetica, sans-serif;
   text-decoration: none;
-  color: rgba(0, 0, 180, 0.8);
+  color: var(--highlight-text-color);
 }
 
 .main-sub-directories-links {
   font-family: Helvetica, sans-serif;
   text-decoration: none;
-  color: rgba(0, 0, 180, 0.8);
+  color: var(--highlight-text-color);
 }
 
 .main-header-container {
@@ -59,7 +70,7 @@ body {
 
 .main-header-description {
   font-size: 24px;
-  color: gray;
+  color: var(--subtle-text-color);
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -109,14 +120,14 @@ body {
   text-decoration: none;
   color: inherit;
   font-family: "Quicksand";
-  border: 1px solid gray;
+  border: var(--main-border-color);
   border-radius: 100px;
   padding: 5px 10px;
 }
 
 .main-view-post-button {
-  color: rgba(0, 0, 140, 0.8);
-  border: 1px solid rgba(0, 0, 140, 0.8);
+  color: var(--highlight-text-color);
+  border: 1px solid var(--highlight-text-color);
   background-color: white;
   padding: 7px;
   font-size: 19px;
@@ -127,7 +138,7 @@ body {
 }
 
 .main-view-post-button:hover {
-  background-color: rgba(0, 0, 140, 0.8);
+  background-color: var(--highlight-text-color);
   color: white;
 }
 
@@ -149,13 +160,13 @@ body {
   min-height: 100vh;
   margin: 0px 10%;
   padding: 40px 10%;
-  border-left: 1px solid gray;
+  border-left: var(--main-border-color);
 }
 
 .main-no-posts-title {
   font-family: "Lato";
   font-size: 32px;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--subtle-text-color);
   margin-bottom: 50px;
 }
 
