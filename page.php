@@ -10,8 +10,12 @@
                         <h2 class="page-post-title"><?php esc_attr(the_title()); ?></h2>
                     </div>
                 </div>
-                <div class="page-post-content"><?php esc_attr(the_content()); ?></div>
+                <div class="page-post-content"><?php esc_attr(the_content()); ?>
+                    <div style="clear: both;"></div>
+                </div>
+
             <?php } ?>
+            <?php comments_template(); ?>
         </div>
     </div>
     <?php get_footer(); ?>

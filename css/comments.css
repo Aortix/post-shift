@@ -1,6 +1,7 @@
 .comments-container {
   width: 80%;
   text-align: left;
+  margin: 0 auto;
 }
 
 .comment-container {
@@ -11,11 +12,13 @@
 }
 
 .comments-main-title {
+  text-align: left;
+  width: 80%;
+  margin: 50px auto;
   font-family: "Lato";
   font-size: 48px;
   font-weight: 500;
   color: var(--subtle-text-color);
-  margin-bottom: 50px;
 }
 
 .comment-intro-container {

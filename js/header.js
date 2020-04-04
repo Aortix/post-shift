@@ -53,15 +53,22 @@ class Header {
   }
 
   static toggleNavBar() {
-    const navbarDisplayStatus = document.getElementById("navbar-menu-container")
-      .style.display;
+    const navbarDisplayStatus = document.getElementsByClassName(
+      "navbar-main-container"
+    )[0].style.display;
 
     if (navbarDisplayStatus === "none") {
-      document.getElementById("navbar-menu-container").style.display = "block";
+      document.getElementsByClassName(
+        "navbar-main-container"
+      )[0].style.display = "block";
     } else if (navbarDisplayStatus === "block") {
-      document.getElementById("navbar-menu-container").style.display = "none";
+      document.getElementsByClassName(
+        "navbar-main-container"
+      )[0].style.display = "none";
     } else {
-      document.getElementById("navbar-menu-container").style.display = "block";
+      document.getElementsByClassName(
+        "navbar-main-container"
+      )[0].style.display = "block";
     }
 
     return;

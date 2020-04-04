@@ -61,7 +61,11 @@
                     </div>
                 </div>
                 <a href="<?php echo esc_url(get_permalink()); ?>"><button class="main-view-post-button">View Post</button></a>
+                <?php if (has_post_thumbnail()) {
+                    the_post_thumbnail();
+                } ?>
                 <div class="main-post-content"><?php esc_attr(the_content()); ?></div>
+                <div style="clear: both;"></div>
             <?php }
         } else { ?>
             <p class="main-no-posts-title">No posts to display.</p>

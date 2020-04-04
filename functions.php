@@ -53,6 +53,8 @@ function removeSubsAdminBar()
     }
 }
 
+add_theme_support('post-thumbnails');
+
 add_action('wp_enqueue_scripts', 'wp_variety_shopping_scripts');
 add_action('widgets_init', 'register_sidebar_init');
 add_action('init', 'wp_custom_nav_menu');

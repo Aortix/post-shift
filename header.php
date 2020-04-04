@@ -29,7 +29,6 @@ global $wp;
                 <div class="header-menu-container">
                     <i class="las la-bars" onclick="Header.toggleMenu()"></i>
                     <div class="header-page-links">
-                        <?php echo wp_list_pages(array('title_li' => '')) ?>
                         <a class="header-auth-logout-link" href="<?php echo esc_url(wp_logout_url()); ?>">
                             <p class="header-auth-logout">Logout</p>
                         </a>
@@ -46,9 +45,6 @@ global $wp;
                 </div>
                 <div class="header-menu-container">
                     <i class="las la-bars" onclick="Header.toggleMenu()"></i>
-                    <div class="header-page-links">
-                        <?php echo wp_list_pages(array('title_li' => '')) ?>
-                    </div>
                 </div>
             <?php } ?>
         </div>

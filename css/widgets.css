@@ -99,10 +99,10 @@
 }
 
 .widget_archive select {
+  display: block;
   color: var(--main-theme-text-color);
   background-color: var(--main-theme-color);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px auto;
   padding: 4px;
   font-family: "Helvetica";
 }
@@ -259,7 +259,7 @@
   margin-bottom: 7px;
 }
 
-.widget_pages ul li * {
+.widget_pages ul li a {
   color: var(--main-theme-text-color);
   text-decoration: none;
   border-bottom: var(--main-border-color);
