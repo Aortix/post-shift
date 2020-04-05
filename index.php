@@ -36,8 +36,14 @@
                     <div class="main-post-content"><?php esc_attr(the_content()); ?></div>
                     <div style="clear: both;"></div>
                 </div>
-            <?php }
-        } else { ?>
+            <?php } ?>
+            <div class="nav-previous alignleft"><?php next_posts_link('Older posts'); ?></div>
+
+
+
+            <div class="nav-next alignright"><?php previous_posts_link('Newer posts'); ?></div>
+
+        <?php } else { ?>
             <p class="main-no-posts-title">No posts to display.</p>
         <?php } ?>
     </div>

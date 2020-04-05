@@ -32,6 +32,8 @@
                 <div style="clear: both;"></div>
             </div>
         <?php } ?>
+        <div class="nav-previous alignleft"><?php next_posts_link('Older posts'); ?></div>
+        <div class="nav-next alignright"><?php previous_posts_link('Newer posts'); ?></div>
     </div>
     <div class="right-sidebar-wrapper">
         <?php get_sidebar('Right Sidebar'); ?>

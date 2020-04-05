@@ -27,6 +27,27 @@ p {
   word-break: break-all;
 }
 
+img {
+  max-width: 100% !important;
+  height: auto;
+}
+
+.nav-next a {
+  color: initial;
+  text-decoration: none;
+  font-family: "Quicksand";
+  border: 1px solid var(--main-theme-color);
+  padding: 9px;
+}
+
+.nav-previous a {
+  color: initial;
+  text-decoration: none;
+  font-family: "Quicksand";
+  border: 1px solid var(--main-theme-color);
+  padding: 9px;
+}
+
 .wp-block-cover-text {
   color: white !important;
 }
@@ -88,6 +109,10 @@ p {
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 20px;
+}
+
+.main-posts-container * {
+  max-width: 100%;
 }
 
 .main-home-page-link {
