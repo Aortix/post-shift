@@ -42,7 +42,7 @@
             while (have_posts()) {
                 the_post(); ?>
                 <div class="main-post-container">
-                    <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email'))); ?>" alt="user_post_avatar"></img></a>
+                    <a class="main-avatar-per-post" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email'))); ?>" alt="user_post_avatar"></img></a>
                     <div class="sub-post-container">
                         <a href="<?php echo esc_url(get_permalink()); ?>" class="sub-post-title"><?php esc_attr(the_title()); ?></a>
                         <p class="sub-post-author">By <?php esc_attr(the_author()); ?></p>
@@ -64,12 +64,17 @@
                 <?php if (has_post_thumbnail()) {
                     the_post_thumbnail();
                 } ?>
-                <div class="main-post-content"><?php esc_attr(the_content()); ?></div>
-                <div style="clear: both;"></div>
-            <?php }
-        } else { ?>
+                <div class="main-post-content">
+                    <?php esc_attr(the_content()); ?>
+                    <div style="clear: both;"></div>
+                </div>
+            <?php } ?>
+            <div class="nav-previous alignleft"><?php next_posts_link('Older Posts'); ?></div>
+            <div class="nav-next alignright"><?php previous_posts_link('Newer Posts'); ?></div>
+        <?php } else { ?>
             <p class="main-no-posts-title">No posts to display.</p>
         <?php } ?>
+        <div style="clear: both;"></div>
     </div>
     <div class="right-sidebar-wrapper">
         <?php get_sidebar('Right Sidebar'); ?>

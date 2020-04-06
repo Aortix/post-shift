@@ -32,12 +32,20 @@ img {
   height: auto;
 }
 
+.nav-next {
+  margin-bottom: 18px;
+}
+
 .nav-next a {
   color: initial;
   text-decoration: none;
   font-family: "Quicksand";
-  border: 1px solid var(--main-theme-color);
+  border: 1px solid black;
   padding: 9px;
+}
+
+.nav-previous {
+  margin-bottom: 18px;
 }
 
 .nav-previous a {
@@ -113,6 +121,10 @@ img {
 
 .main-posts-container * {
   max-width: 100%;
+}
+
+.main-avatar-per-post {
+  display: none;
 }
 
 .main-home-page-link {
@@ -257,6 +269,12 @@ img {
   font-size: 32px;
   color: var(--subtle-text-color);
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 800px) {
+  .main-avatar-per-post {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 900px) {

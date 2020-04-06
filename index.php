@@ -11,7 +11,7 @@
                 the_post(); ?>
                 <div <?php post_class(); ?>>
                     <div class="main-post-container" <?php post_class("post_card") ?>>
-                        <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email'))); ?>" alt="index_user_avatar"></img></a>
+                        <a class="main-avatar-per-post" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email'))); ?>" alt="index_user_avatar"></img></a>
                         <div class="sub-post-container">
                             <a href="<?php echo esc_url(get_permalink()); ?>" class="sub-post-title"><?php esc_attr(the_title()); ?></a>
                             <p class="sub-post-author">By <?php esc_attr(the_author()); ?></p>
@@ -33,16 +33,15 @@
                     <?php if (has_post_thumbnail()) {
                         the_post_thumbnail();
                     } ?>
-                    <div class="main-post-content"><?php esc_attr(the_content()); ?></div>
+                    <div class="main-post-content">
+                        <?php esc_attr(the_content()); ?>
+                        <div style="clear: both;"></div>
+                    </div>
                     <div style="clear: both;"></div>
                 </div>
             <?php } ?>
             <div class="nav-previous alignleft"><?php next_posts_link('Older posts'); ?></div>
-
-
-
             <div class="nav-next alignright"><?php previous_posts_link('Newer posts'); ?></div>
-
         <?php } else { ?>
             <p class="main-no-posts-title">No posts to display.</p>
         <?php } ?>

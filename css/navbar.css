@@ -11,12 +11,16 @@
 }
 
 .navbar-section-text-sub-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-items: center;
   width: 80%;
   margin: 0 auto;
+}
+
+.menu-nav-bar-menu-container {
+  padding: 40px;
+  margin: 0px auto;
 }
 
 .navbar-section-text {
@@ -25,6 +29,7 @@
   color: rgba(0, 0, 0, 0.3);
   margin: 0px;
   padding: 10px;
+  text-align: center;
 }
 
 #navbar-menu-ul {
@@ -33,17 +38,16 @@
   min-height: 80px;
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   justify-items: center;
-  grid-row-gap: 5px;
+  grid-row-gap: 30px;
   align-items: center;
   list-style-type: none;
 }
 
 #navbar-menu-ul > li {
-  font-size: 40px;
-  padding: 40px;
+  font-size: 26px;
   font-family: "Quicksand";
   font-weight: 700;
 }
@@ -54,7 +58,7 @@
 }
 
 .sub-menu {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .sub-menu li {
@@ -68,10 +72,10 @@
   min-height: 80px;
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   justify-items: center;
-  grid-row-gap: 5px;
+  grid-row-gap: 30px;
   list-style-type: none;
 }
 
@@ -93,12 +97,59 @@
   list-style-type: circle;
 }
 
-@media screen and (min-width: 900px) {
-  #navbar-menu-ul > li {
-    font-size: 26px;
+@media screen and (min-width: 800px) {
+  #navbar-menu-ul {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .sub-menu {
-    font-size: 20px;
+  .navbar-pages-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar-section-text {
+    text-align: left;
+  }
+
+  .navbar-section-text-sub-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #navbar-menu-ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .navbar-pages-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .navbar-section-text-sub-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  #navbar-menu-ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .navbar-pages-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .navbar-section-text-sub-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #navbar-menu-ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .navbar-pages-container {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

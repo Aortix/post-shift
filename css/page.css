@@ -5,7 +5,16 @@
 }
 
 .page-post-container {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  margin-bottom: 40px;
+}
+
+.page-post-container img {
+  border-radius: 100px;
+  margin-right: 25px;
 }
 
 .page-page-post-container {

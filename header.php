@@ -43,9 +43,6 @@ global $wp;
                         <p class="header-auth-register">Sign Up</p>
                     </a>
                 </div>
-                <div class="header-menu-container">
-                    <i class="las la-bars" onclick="Header.toggleMenu()"></i>
-                </div>
             <?php } ?>
         </div>
         <div class="header-container">
