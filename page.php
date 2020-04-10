@@ -27,7 +27,9 @@
             <?php } else { ?>
                 <p class="main-no-posts-title"><?php _e('No page content to display.', 'post-shift'); ?></p>
             <?php } ?>
-            <?php comments_template(); ?>
+            <?php if (comments_open() || get_comments_number()) :
+                comments_template();
+            endif; ?>
         </div>
     </div>
     <div class="right-sidebar-wrapper">

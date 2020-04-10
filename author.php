@@ -1,8 +1,18 @@
 <?php get_header(); ?>
 <?php
+function startsWith($string, $startString)
+{
+    $len = strlen($startString);
+    return (substr($string, 0, $len) === $startString);
+}
+
 $current_url = esc_url(home_url(add_query_arg(array(), $wp->request)));
 $index = strpos($current_url, esc_html(get_bloginfo('name')));
 while ($index != false) {
+    if (startsWith(substr($current_url, $index + 1, strlen($current_url)), "page")) {
+        $current_url = substr($current_url, 0, strpos($current_url, "/"));
+        break;
+    }
     $current_url = substr($current_url, $index + 1, strlen($current_url));
     $index = strpos($current_url, "/");
 }

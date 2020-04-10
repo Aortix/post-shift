@@ -42,7 +42,7 @@ class Category
         while ($indexToCut != false) {
             $indexToCut = strpos($current_url_no_protocol, "/");
             $portion_of_url = substr($current_url_no_protocol, 0, $indexToCut);
-            if ($portion_of_url != "category" and $portion_of_url != "author") {
+            if ($portion_of_url != "category" and $portion_of_url != "author" and $portion_of_url != "page") {
                 $cat_id = get_cat_ID($portion_of_url);
                 $cat_link = get_category_link($cat_id);
                 //Push name and link of category onto an array
