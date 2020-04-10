@@ -26,7 +26,12 @@ function format_comment($comment, $args, $depth)
 <div>
     <h4 class="comments-main-title">Comments</h4>
     <div class="comments-container">
-        <?php wp_list_comments('type=comment&callback=format_comment'); ?>
+        <ol>
+            <?php wp_list_comments('type=comment&callback=format_comment'); ?>
+        </ol>
+        <div class="navigation">
+            <?php paginate_comments_links(); ?>
+        </div>
         <?php comment_form(); ?>
     </div>
 </div>

@@ -112,12 +112,17 @@
   box-shadow: 0px 1px 1px black;
 }
 
+.custom-logo {
+  margin-right: 10px;
+}
+
 .header-title {
   display: inline-block;
   font-size: 54px;
   font-family: "Poppins", "Lato", "Helvetica";
   letter-spacing: 1px;
-  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .header-description {

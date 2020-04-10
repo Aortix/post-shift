@@ -1,3 +1,16 @@
+/*
+Theme Name: Post-Shift
+Theme URI: TBA
+Author: Aortix
+Author URI: https://profiles.wordpress.org/aortix/
+Description: Modern theme that has a focus on categories as well as pages, and a dropdown for displaying them all.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: post-shift
+Tags: blog, food-and-drink, right-sidebar, custom-menu, sticky-post, featured-images
+*/
+
 :root {
   --main-theme-color: rgba(40, 40, 40, 1);
   --secondary-theme-color: white;
@@ -30,6 +43,36 @@ p {
 img {
   max-width: 100% !important;
   height: auto;
+}
+
+.wp-caption {
+  color: silver;
+}
+
+.wp-caption-text {
+  font-size: 26px;
+  font-family: "Quicksand";
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 36px;
+}
+
+.gallery-caption {
+  font-size: 26px;
+  font-family: "Quicksand";
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 36px;
+  color: silver;
+}
+
+.bypostauthor {
+  font-size: 26px;
+  font-family: "Quicksand";
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 36px;
+  color: silver;
 }
 
 .nav-next {
