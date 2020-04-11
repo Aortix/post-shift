@@ -1,4 +1,3 @@
-<?php include("classes/categoryClass.php"); ?>
 <?php get_header(); ?>
 <div class="main-container">
     <div class="main-posts-container">
@@ -35,12 +34,12 @@
             <?php } else {
                 $parent_category = $wp_query->get_queried_object(); ?>
                 <a class="main-current-directory-link" href="<?php echo esc_url(get_category_link($parent_category->term_id)) ?>"><?php printf(esc_html__('%s', 'post-shift'), $parent_category->name) ?></a>
-                <i class="las la-arrow-right"></i>
                 <?php $child_categories = get_categories(array(
                     "parent" => $parent_category->term_id
                 ));
-                if (count($child_categories) > 0) {
-                    foreach ($child_categories as $key => $child_category) { ?>
+                if (count($child_categories) > 0) { ?>
+                    <i class="las la-arrow-right"></i>
+                    <?php foreach ($child_categories as $key => $child_category) { ?>
                         <a class="main-directories-links" href="<?php echo esc_url(get_category_link($child_category->term_id)) ?>"><?php printf(esc_html__('%s', 'post-shift'), $child_category->name) ?></a>
                         <?php if ($key !== count($child_categories) - 1) { ?>
                             <i class="las la-grip-lines-vertical"></i>
