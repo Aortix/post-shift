@@ -52,7 +52,7 @@ global $wp;
                         <?php the_custom_logo(); ?>
                     </div>
                 <?php } ?>
-                <a href="/" style="color: inherit;">
+                <a href="<?php echo esc_url(home_url()); ?>" style="color: inherit;">
                     <h1 class="header-title"><?php printf(esc_html__('%s', 'post-shift'), $header_instance->getTitle()); ?></h1>
                 </a>
             </div>
