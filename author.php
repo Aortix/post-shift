@@ -1,36 +1,19 @@
 <?php get_header(); ?>
-<?php
-function startsWith($string, $startString)
-{
-    $len = strlen($startString);
-    return (substr($string, 0, $len) === $startString);
-}
-
-$current_url = esc_url(home_url(add_query_arg(array(), $wp->request)));
-$index = strpos($current_url, esc_html(get_bloginfo('name')));
-while ($index != false) {
-    if (startsWith(substr($current_url, $index + 1, strlen($current_url)), "page")) {
-        $current_url = substr($current_url, 0, strpos($current_url, "/"));
-        break;
-    }
-    $current_url = substr($current_url, $index + 1, strlen($current_url));
-    $index = strpos($current_url, "/");
-}
-$user_of_page = get_user_by("slug", $current_url); ?>
+<?php $current_author = esc_html(get_query_var('author')); ?>
 
 <div class="main-container">
     <div class="main-posts-container">
         <div class="author-container">
             <div class="author-information-and-avatar">
-                <img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email'), ['size' => '160'])) ?>" alt="user_avatar"></img>
+                <img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email', $current_author), ['size' => '160'])) ?>" alt="user_avatar"></img>
                 <div class="author-information">
-                    <p><?php printf(esc_html__('%s', 'post-shift'), $user_of_page->user_nicename) ?></p>
-                    <p><?php printf(esc_html__('%s', 'post-shift'), $user_of_page->first_name) ?> <?php printf(esc_html__('%s', 'post-shift'), $user_of_page->last_name) ?></p>
-                    <p><?php printf(esc_html__('%s', 'post-shift'), $user_of_page->user_url) ?></p>
+                    <p><?php printf(esc_html__('%s', 'post-shift'), get_the_author_meta('user_nicename', $current_author)) ?></p>
+                    <p><?php printf(esc_html__('%s', 'post-shift'), get_the_author_meta('first_name', $current_author)) ?> <?php printf(esc_html__('%s', 'post-shift'), get_the_author_meta('last_name', $current_author)) ?></p>
+                    <p><?php printf(esc_html__('%s', 'post-shift'), get_the_author_meta('user_url', $current_author)) ?></p>
                 </div>
             </div>
-            <?php if (!empty(esc_html($user_of_page->description))) { ?>
-                <p class="author-description"><?php printf(esc_html__('%s', 'post-shift'), $user_of_page->description) ?></p>
+            <?php if (!empty(esc_html(get_the_author_meta('description', $current_author)))) { ?>
+                <p class="author-description"><?php printf(esc_html__('%s', 'post-shift'), get_the_author_meta('description', $current_author)) ?></p>
             <?php } else { ?>
                 <p class="author-description" style="text-align: center;"><?php _e("No description to display.", "post-shift") ?></p>
             <?php } ?>

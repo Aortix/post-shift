@@ -14,7 +14,9 @@ class Category
         $length_of_url = strlen($current_url);
 
         //Snips off protocol portion of URL
-        $indexToCut = strpos($current_url, get_bloginfo('name'));
+        $urlparts = parse_url(home_url());
+        $domain = $urlparts['host'];
+        $indexToCut = strpos($current_url, $domain);
         $current_url_no_protocol = substr($current_url, $indexToCut, $length_of_url);
         //Retrieves domain name portion of URL
         $indexToCut = strpos($current_url_no_protocol, "/");
@@ -31,7 +33,9 @@ class Category
         $length_of_url = strlen($current_url);
 
         //Snips off protocol portion of URL
-        $indexToCut = strpos($current_url, get_bloginfo('name'));
+        $urlparts = parse_url(home_url());
+        $domain = $urlparts['host'];
+        $indexToCut = strpos($current_url, $domain);
         $current_url_no_protocol = substr($current_url, $indexToCut, $length_of_url);
 
         //Start working through the URL getting each section as a string
