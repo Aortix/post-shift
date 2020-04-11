@@ -2,37 +2,54 @@
 <?php get_header(); ?>
 <div class="main-container">
     <div class="main-posts-container">
-        <?php $categoryInstance = new Category();
-        //Home page link 
-        ?>
-        <a class="main-home-page-link" href="<?php echo esc_url(get_home_url()) ?>"><?php printf(esc_html__('%s', 'post-shift'), $categoryInstance->getDomainName($wp)); ?></a>
-        <i class="las la-arrow-right"></i>
-
-        <?php //Category links
-        $categories = $categoryInstance->getCategories($wp);
-        foreach ($categories as $cat => $cat_value) { ?>
-            <a class="main-directories-links" href="<?php echo esc_url($cat_value); ?>"><?php printf(esc_html__('%s', 'post-shift'), $cat); ?></a>
+        <div style="display: flex; flex-wrap: wrap; align-items: center;">
+            <?php
+            $countToBreakWhileLoopInCaseOfBug = 0; ?>
+            <a class="main-directories-links" href="<?php echo esc_url(home_url()); ?>"><?php _e('Home', 'post-shift') ?></a>
             <i class="las la-arrow-right"></i>
-        <?php }
-
-        //Current category link 
-        ?>
-        <a class="main-current-directory-link" href="<?php echo esc_url(get_category_link(get_cat_ID(single_cat_title('', false)))); ?>"><?php ucfirst(sprintf(esc_html__('%s', 'post-shift'), single_cat_title())); ?></a>
-
-        <?php //Subcategory links if they exist 
-        $subcategories = $categoryInstance->getSubCategories();
-        if (count($subcategories) > 0) { ?>
-            <i class="las la-arrow-right"></i>
-        <?php }
-        foreach ($subcategories as $sub => $categories) { ?>
-            <a class="main-sub-directories-links" href="<?php echo esc_url(get_category_link($categories->term_id)); ?>"><?php ucfirst(printf(esc_html__('%s', 'post-shift'), $categories->name)); ?></a>
-            <?php if (count($subcategories) != $sub + 1) { ?>
-                <i class="las la-grip-lines-vertical"></i>
-        <?php }
-        }
-
-        //Start of standard view 
-        ?>
+            <?php $parent_category_id = $wp_query->get_queried_object()->parent;
+            if ($parent_category_id !== 0) {
+                $parent_category = get_category($parent_category_id); ?>
+                <div style="display: flex; flex-direction: row-reverse; align-items: center;">
+                    <?php while ($countToBreakWhileLoopInCaseOfBug < 100) {
+                        $countToBreakWhileLoopInCaseOfBug++; ?>
+                        <i class="las la-arrow-right"></i>
+                        <a class="main-directories-links" href="<?php echo esc_url(get_category_link($parent_category->term_id)); ?>"><?php printf(esc_html__('%s', 'post-shift'), $parent_category->name); ?></a>
+                    <?php if ($parent_category->parent === 0) {
+                            break;
+                        }
+                        $parent_category = get_category($parent_category->parent);
+                    } ?>
+                </div>
+                <?php $child_category = $wp_query->get_queried_object(); ?>
+                <a class="main-current-directory-link" href="<?php echo esc_url(get_category_link($child_category->term_id)) ?>"><?php printf(esc_html__('%s', 'post-shift'), $child_category->name); ?></a>
+                <?php $child_categories = get_categories(array(
+                    "parent" => $child_category->term_id
+                ));
+                if (count($child_categories) > 0) {
+                    foreach ($child_categories as $key => $child_category2) { ?>
+                        <i class="las la-arrow-right"></i>
+                        <a class="main-directories-links" href="<?php echo esc_url(get_category_link($child_category2->term_id)) ?>"><?php printf(esc_html__('%s', 'post-shift'), $child_category2->name) ?></a>
+                <?php }
+                } ?>
+            <?php } else {
+                $parent_category = $wp_query->get_queried_object(); ?>
+                <a class="main-current-directory-link" href="<?php echo esc_url(get_category_link($parent_category->term_id)) ?>"><?php printf(esc_html__('%s', 'post-shift'), $parent_category->name) ?></a>
+                <i class="las la-arrow-right"></i>
+                <?php $child_categories = get_categories(array(
+                    "parent" => $parent_category->term_id
+                ));
+                if (count($child_categories) > 0) {
+                    foreach ($child_categories as $key => $child_category) { ?>
+                        <a class="main-directories-links" href="<?php echo esc_url(get_category_link($child_category->term_id)) ?>"><?php printf(esc_html__('%s', 'post-shift'), $child_category->name) ?></a>
+                        <?php if ($key !== count($child_categories) - 1) { ?>
+                            <i class="las la-grip-lines-vertical"></i>
+            <?php }
+                    }
+                }
+            }
+            ?>
+        </div>
         <div class="main-header-container">
             <h2 class="main-header-title"><?php sprintf(esc_html__('%s', 'post-shift'), single_cat_title()); ?></h2>
             <!---Check escaping for category description-->

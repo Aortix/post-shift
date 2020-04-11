@@ -16,8 +16,13 @@ class Category
         //Snips off protocol portion of URL
         $urlparts = parse_url(home_url());
         $domain = $urlparts['host'];
-        $indexToCut = strpos($current_url, $domain);
-        $current_url_no_protocol = substr($current_url, $indexToCut, $length_of_url);
+        if ($domain === "localhost") {
+            $current_url_no_protocol = substr($current_url, strpos($current_url, $domain), $length_of_url);
+            $current_url_no_protocol = substr($current_url_no_protocol, strpos($current_url_no_protocol, "/") + 1, strlen($current_url_no_protocol));
+        } else {
+            $indexToCut = strpos($current_url, $domain);
+            $current_url_no_protocol = substr($current_url, $indexToCut, $length_of_url);
+        }
         //Retrieves domain name portion of URL
         $indexToCut = strpos($current_url_no_protocol, "/");
         $current_domain_name = substr($current_url_no_protocol, 0, $indexToCut);
@@ -35,8 +40,13 @@ class Category
         //Snips off protocol portion of URL
         $urlparts = parse_url(home_url());
         $domain = $urlparts['host'];
-        $indexToCut = strpos($current_url, $domain);
-        $current_url_no_protocol = substr($current_url, $indexToCut, $length_of_url);
+        if ($domain === "localhost") {
+            $current_url_no_protocol = substr($current_url, strpos($current_url, $domain), $length_of_url);
+            $current_url_no_protocol = substr($current_url_no_protocol, strpos($current_url_no_protocol, "/") + 1, strlen($current_url_no_protocol));
+        } else {
+            $indexToCut = strpos($current_url, $domain);
+            $current_url_no_protocol = substr($current_url, $indexToCut, $length_of_url);
+        }
 
         //Start working through the URL getting each section as a string
         $sections_of_url = array();

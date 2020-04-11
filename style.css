@@ -180,6 +180,7 @@ img {
   font-family: Helvetica, sans-serif;
   text-decoration: none;
   color: var(--highlight-text-color);
+  margin: 2px;
 }
 
 .main-current-directory-link {
@@ -188,6 +189,7 @@ img {
   font-family: Helvetica, sans-serif;
   text-decoration: none;
   color: var(--highlight-text-color);
+  margin: 2px;
 }
 
 .main-sub-directories-links {
