@@ -1,15 +1,10 @@
 # post-shift
 
-Contributors: Aortix
-
-Donate link: TBD
-
-Tags: blog, news, education, two-columns, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, sticky-post, featured-images, translation-ready
-
-Stable tag: 5.4
-
-License: GPLv2 or later
-
+Contributors: Aortix  
+Donate link: TBD  
+Tags: blog, news, education, two-columns, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, sticky-post, featured-images, translation-ready  
+Stable tag: 5.4  
+License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
