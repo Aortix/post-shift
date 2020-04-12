@@ -7,8 +7,17 @@ class Header
 
     public function __construct($title, $description)
     {
-        $this->title = $title;
-        $this->description = $description;
+        if (empty($title)) {
+            $this->title = "post-shift";
+        } else {
+            $this->title = $title;
+        }
+
+        if (empty($description)) {
+            $this->description = "Just another WordPress theme.";
+        } else {
+            $this->description = $description;
+        }
     }
 
     public function getTitle()
