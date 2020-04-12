@@ -22,4 +22,4 @@ TBD
 
 = 1.0 =
 
-- Initial Relase
+* Initial Relase
