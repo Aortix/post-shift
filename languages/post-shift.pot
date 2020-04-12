@@ -1,0 +1,167 @@
+# Copyright (C) 2020 Aortix
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: post-shift 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/post-shift\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-12T13:59:53-07:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: post-shift\n"
+
+#. Theme Name of the theme
+msgid "post-shift"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "TBA"
+msgstr ""
+
+#. Description of the theme
+msgid "Modern theme that has a focus on categories as well as pages, and a dropdown for displaying them all."
+msgstr ""
+
+#. Author of the theme
+msgid "Aortix"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://profiles.wordpress.org/aortix/"
+msgstr ""
+
+#: 404.php:3
+msgid "404 Not Found"
+msgstr ""
+
+#: 404.php:4
+msgid "Whoops, looks like what you're looking for isn't here. Sorry about that!"
+msgstr ""
+
+#: author.php:10
+#: author.php:11
+#: author.php:12
+#: author.php:16
+#: author.php:29
+#: author.php:30
+#: author.php:34
+#: author.php:39
+#: category.php:16
+#: category.php:24
+#: category.php:31
+#: category.php:36
+#: category.php:43
+#: category.php:53
+#: category.php:54
+#: category.php:63
+#: category.php:64
+#: category.php:68
+#: category.php:73
+#: comments.php:9
+#: comments.php:18
+#: footer.php:4
+#: header.php:26
+#: header.php:56
+#: header.php:59
+#: home.php:12
+#: home.php:13
+#: home.php:17
+#: home.php:22
+#: index.php:5
+#: index.php:6
+#: index.php:16
+#: index.php:17
+#: index.php:21
+#: index.php:26
+#: page.php:13
+#: search.php:11
+#: search.php:12
+#: search.php:16
+#: search.php:21
+#: single.php:12
+#: single.php:13
+#: single.php:17
+#: single.php:22
+msgid "%s"
+msgstr ""
+
+#: author.php:18
+msgid "No description to display."
+msgstr ""
+
+#: author.php:21
+msgid "Author Posts"
+msgstr ""
+
+#: author.php:45
+#: category.php:79
+#: home.php:28
+#: index.php:32
+#: search.php:27
+msgid "View Post"
+msgstr ""
+
+#: author.php:58
+#: category.php:92
+#: home.php:43
+#: index.php:46
+#: search.php:40
+#: single.php:40
+msgid "No posts to display."
+msgstr ""
+
+#: category.php:7
+msgid "Home"
+msgstr ""
+
+#: comments.php:14
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:27
+msgid "Comments"
+msgstr ""
+
+#: components/navbar.php:20
+msgid "Pages"
+msgstr ""
+
+#: components/navbar.php:30
+msgid "Categories"
+msgstr ""
+
+#: functions.php:25
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions.php:38
+msgid "Pages Menu"
+msgstr ""
+
+#: functions.php:39
+msgid "Categories Menu"
+msgstr ""
+
+#: header.php:33
+msgid "Logout"
+msgstr ""
+
+#: header.php:40
+msgid "Login"
+msgstr ""
+
+#: header.php:43
+msgid "Sign Up"
+msgstr ""
+
+#: page.php:15
+msgid "$s"
+msgstr ""
+
+#: page.php:28
+msgid "No page content to display."
+msgstr ""
