@@ -64,10 +64,6 @@ function themename_custom_logo_setup()
     add_theme_support('custom-logo', $defaults);
 }
 
-$args = array(
-    'default-color' => 'ffffff'
-);
-
 function cd_add_editor_styles()
 {
     add_editor_style(get_stylesheet_uri());
@@ -82,6 +78,9 @@ add_action('after_setup_theme', 'my_theme_load_theme_textdomain');
 
 add_action('after_setup_theme', 'themename_custom_logo_setup');
 add_action('init', 'cd_add_editor_styles');
+$args = array(
+    'default-color' => 'ffffff'
+);
 add_theme_support('custom-background', $args);
 
 add_theme_support('post-thumbnails');

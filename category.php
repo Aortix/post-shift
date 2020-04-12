@@ -51,7 +51,6 @@
         </div>
         <div class="main-header-container">
             <h2 class="main-header-title"><?php sprintf(esc_html__('%s', 'post-shift'), single_cat_title()); ?></h2>
-            <!---Check escaping for category description-->
             <div class="main-header-description"><?php printf(esc_html__('%s', 'post-shift'), category_description()); ?></div>
         </div>
         <?php

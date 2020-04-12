@@ -2,8 +2,8 @@
 <div class="main-container">
     <div class="main-posts-container">
         <div class="main-header-container">
-            <h2 class="main-header-title"><?php esc_attr(single_cat_title()); ?></h2>
-            <div class="main-header-description"><?php echo category_description(); ?></div>
+            <h2 class="main-header-title"><?php sprintf(esc_html__('%s', 'post-shift'), single_cat_title()); ?></h2>
+            <div class="main-header-description"><?php printf(esc_html__('%s', 'post-shift'), category_description()); ?></div>
         </div>
         <?php
         if (have_posts()) {
