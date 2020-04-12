@@ -1,4 +1,5 @@
 === post-shift ===
+
 Contributors: Aortix
 Donate link: TBD
 Tags: blog, news, education, two-columns, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, sticky-post, featured-images, translation-ready
@@ -14,6 +15,16 @@ Modern theme that focuses on categories as well as pages and posts. Each page an
 
 TBD
 
+== Copyright ==
+
+post-shift is distributed under the terms of the GNU GPL.
+
+post-shift bundles the following third-party resources:
+
+line-awesome icons -> licensed under either the MIT or the Good Boy Licence -> [Line Awesome Link](https://github.com/icons8/line-awesome/blob/master/LICENSE.md)
+
+google fonts -> "The open source fonts in the Google Fonts catalog are published under licenses that allow you to use them on any website, whether it’s commercial or personal." -> [Google Fonts Link](https://developers.google.com/fonts/faq)
+
 == Screenshots ==
 
 [Main Screenshot](/screenshot.png)
@@ -22,4 +33,4 @@ TBD
 
 = 1.0 =
 
-* Initial Relase
+- Initial Release
