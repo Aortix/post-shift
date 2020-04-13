@@ -1,9 +1,9 @@
 # post-shift
 
-Contributors: Aortix  
+Contributors: aortix  
 Tags: blog, education, two-columns, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, sticky-post, featured-images, translation-ready  
 Stable tag: 5.4  
-License: GPL-2.0-or-later
+License: GPL-2.0-or-later  
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
 ## Description

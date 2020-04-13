@@ -1,9 +1,13 @@
 === post-shift ===
 
-Contributors: aortix
-Tags: blog, education, two-columns, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, sticky-post, featured-images, translation-ready
-Stable tag: 5.4
-License: GPL-2.0-or-later
+Contributors: aortix  
+Donate link: 
+Tags: blog, education, two-columns, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, sticky-post, featured-images, translation-ready  
+Requires at least: 1.0
+Tested up to: 1.0
+Requires PHP: 1.0  
+Stable tag: 5.4  
+License: GPL-2.0-or-later  
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
 == Description ==
@@ -26,10 +30,14 @@ google fonts -> "The open source fonts in the Google Fonts catalog are published
 
 == Screenshots ==
 
-[Main Screenshot](/screenshot.png)
+/screenshot.png
 
 == Changelog ==
 
 = 1.0 =
-
 - Initial Release
+
+== Upgrade Notice ==
+
+= 1.0=
+Initial Release
