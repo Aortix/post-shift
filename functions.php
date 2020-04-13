@@ -75,20 +75,17 @@ function my_theme_load_theme_textdomain()
 }
 
 add_action('after_setup_theme', 'my_theme_load_theme_textdomain');
-
 add_action('after_setup_theme', 'themename_custom_logo_setup');
 add_action('init', 'cd_add_editor_styles');
-$args = array(
-    'default-color' => 'ffffff'
-);
-add_theme_support('custom-background', $args);
-
 add_theme_support('post-thumbnails');
 add_theme_support('automatic-feed-links');
-
 add_action('after_setup_theme', 'wpse_theme_setup');
-
 add_action('wp_enqueue_scripts', 'wp_variety_shopping_scripts');
 add_action('widgets_init', 'register_sidebar_init');
 add_action('init', 'wp_custom_nav_menus');
 add_action('admin_init', 'redirectSubsToFrontEnd');
+
+$args = array(
+    'default-color' => 'ffffff'
+);
+add_theme_support('custom-background', $args);

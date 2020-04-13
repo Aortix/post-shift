@@ -17,7 +17,7 @@ function display_all_categories()
 <div class="navbar-main-container">
     <div class="navbar-section-text-container">
         <div class="navbar-section-text-sub-container">
-            <h4 class="navbar-section-text"><?php _e("Pages", "post-shift") ?></h4>
+            <h4 class="navbar-section-text"><?php esc_html_e("Pages", "post-shift") ?></h4>
         </div>
     </div>
     <?php wp_nav_menu(array(
@@ -27,7 +27,7 @@ function display_all_categories()
     )); ?>
     <div class="navbar-section-text-container">
         <div class="navbar-section-text-sub-container">
-            <h4 class="navbar-section-text"><?php _e("Categories", "post-shift") ?></h4>
+            <h4 class="navbar-section-text"><?php esc_html_e("Categories", "post-shift") ?></h4>
         </div>
     </div>
     <?php wp_nav_menu(array(
