@@ -3,9 +3,9 @@
 Contributors: aortix  
 Donate link: 
 Tags: blog, education, two-columns, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, sticky-post, featured-images, translation-ready  
-Requires at least: 1.0
-Tested up to: 1.0
-Requires PHP: 1.0  
+Requires at least: 5.0  
+Tested up to: 5.4  
+Requires PHP: 5.2  
 Stable tag: 5.4  
 License: GPL-2.0-or-later  
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2

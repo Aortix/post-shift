@@ -1,19 +1,20 @@
 <?php get_header(); ?>
 <?php $current_author = esc_html(get_query_var('author')); ?>
+<?php $author_description = esc_html(get_the_author_meta('description', $current_author)); ?>
 
 <div class="main-container">
     <div class="main-posts-container">
         <div class="author-container">
             <div class="author-information-and-avatar">
-                <img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email', $current_author), ['size' => '160'])) ?>" alt="user_avatar"></img>
+                <img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('user_email', $current_author), array('size' => '160'))) ?>" alt="user_avatar"></img>
                 <div class="author-information">
                     <p><?php echo esc_html(get_the_author_meta('user_nicename', $current_author)); ?></p>
                     <p><?php echo esc_html(get_the_author_meta('first_name', $current_author)) ?> <?php echo esc_html(get_the_author_meta('last_name', $current_author)) ?></p>
                     <p><?php echo esc_html(get_the_author_meta('user_url', $current_author)) ?></p>
                 </div>
             </div>
-            <?php if (!empty(esc_html(get_the_author_meta('description', $current_author)))) { ?>
-                <p class="author-description"><?php echo esc_html(get_the_author_meta('description', $current_author)) ?></p>
+            <?php if (!empty($author_description)) { ?>
+                <p class="author-description"><?php echo esc_html($author_description); ?></p>
             <?php } else { ?>
                 <p class="author-description" style="text-align: center;"><?php esc_html_e("No description to display.", "post-shift") ?></p>
             <?php } ?>

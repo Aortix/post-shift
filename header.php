@@ -17,7 +17,7 @@ global $wp;
         <div class="header-auth-container">
             <?php if (is_user_logged_in()) { ?>
                 <div class="header-logged-in-information">
-                    <a class="header-auth-avatar-link" href="<?php echo esc_url(get_author_posts_url(get_current_user_id())); ?>"><img src="<?php echo esc_url(get_avatar_url(get_current_user_id(), ['size' => '24'])); ?>" alt="header_user_avatar"></img></a>
+                    <a class="header-auth-avatar-link" href="<?php echo esc_url(get_author_posts_url(get_current_user_id())); ?>"><img src="<?php echo esc_url(get_avatar_url(get_current_user_id(), array('size' => '24'))); ?>" alt="header_user_avatar"></img></a>
                     <a class="header-auth-name-link" href="<?php echo esc_url(get_author_posts_url(get_current_user_id())); ?>">
                         <p class="header-auth-name"><?php echo esc_html(wp_get_current_user()->display_name); ?></p>
                     </a>

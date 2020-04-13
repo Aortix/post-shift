@@ -4,7 +4,7 @@ function format_comment($comment, $args, $depth)
     <div class="comment-container">
         <div class="comment-intro-container">
             <a href="<?php echo esc_url(get_author_posts_url(get_user_by('email', $comment->comment_author_email)->ID)); ?>">
-                <img src="<?php echo esc_url(get_avatar_url($comment->comment_author_email, ['size' => '32'])); ?>" alt="commenters_avatar"></img>
+                <img src="<?php echo esc_url(get_avatar_url($comment->comment_author_email, array('size' => '32'))); ?>" alt="commenters_avatar"></img>
             </a>
             <p class="comment-intro-text"><?php echo esc_html(ucfirst((get_comment_author()))) . esc_html__(' commented on ', 'post-shift') . esc_html(get_comment_date()); ?></p>
         </div>
