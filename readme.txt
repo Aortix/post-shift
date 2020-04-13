@@ -34,10 +34,10 @@ google fonts -> "The open source fonts in the Google Fonts catalog are published
 
 == Changelog ==
 
-= 1.0 =
+= 1.1 =
 - Initial Release
 
 == Upgrade Notice ==
 
-= 1.0=
+= 1.1 =
 Initial Release
